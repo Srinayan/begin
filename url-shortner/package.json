@@ -1,0 +1,14 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "url shortning tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bitly": "^7.0.1"
+  }
+}
