@@ -1,0 +1,25 @@
+{
+    "name": "Shopify Export - Integration setup class",
+    "_connectionId": "5f133d273dea9f68d8e28dd2",
+    "asynchronous": true,
+    "assistant": "shopify",
+    "http": {
+        "relativeURI": "/admin/products.json{{#compare export.http.paging.page \"!=\" \"1\"}}?page={{{export.http.paging.page}}}{{/compare}}",
+        "method": "GET",
+        "headers": [{
+            "name": "X-Shopify-Api-Features",
+            "value": "include-presentment-prices"
+        }],
+        "successMediaType": "json",
+        "errorMediaType": "json",
+        "paging": {
+            "method": "page",
+            "page": 1,
+            "relativeURI": "/admin/products.json{{#compare export.http.paging.page \"!=\" \"1\"}}?page={{{export.http.paging.page}}}{{/compare}}",
+            "lastPageStatusCode": 404
+        },
+        "response": {
+            "resourcePath": "products"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "shopify-salesforce flow - Integration setup class",
+    "disabled": false,
+    "_integrationId": "5f135e4bfa0cad3b21d9775a",
+    "skipRetries": false,
+    "pageProcessors": [ {
+        "responseMapping": {
+            "fields": [],
+            "lists": []
+        },
+        "type": "import",
+        "_importId": "5f135bc27edd4f1c8bfa0d43"
+    }],
+    "pageGenerators": [{
+        "_exportId": "5f135cd365e69a1aae697a02"
+    }]
+}
