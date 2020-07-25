@@ -1,0 +1,9 @@
+{
+  "_id": "5f133c557edd4f1c8bf9d664",
+  "name": "Shopify-Salesforce Integration",
+  "description": "Export Product Details from Shopify to Salesforce",
+  "install": [],
+  "installSteps": [],
+  "uninstallSteps": [],
+  "flowGroupings": []
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "5f133db23dea9f68d8e28eba",
+  "name": "shopify-salesforce flow",
+  "skipRetries": false,
+  "pageProcessors": [
+    {
+      "responseMapping": {
+        "fields": [],
+        "lists": []
+      },
+      "type": "import",
+      "_importId": "5f133eb865e69a1aae6944f9"
+    }
+  ],
+  "pageGenerators": [
+    {
+      "_exportId": "5f133db07edd4f1c8bf9d8b1"
+    }
+  ]
+}
