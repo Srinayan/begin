@@ -1,0 +1,8 @@
+{
+  "name": "SS integration through dependency graph",
+  "description": "Export Product Details from Shopify to Salesforce",
+  "install": [],
+  "installSteps": [],
+  "uninstallSteps": [],
+  "flowGroupings": []
+}

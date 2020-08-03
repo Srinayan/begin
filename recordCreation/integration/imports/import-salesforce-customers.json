@@ -1,0 +1,33 @@
+{
+  "name": "Salesforce Product Import",
+  "_connectionId": "5f133df2fa0cad3b21d93eef",
+  "distributed": false,
+  "apiIdentifier": "i7ab16567b",
+  "ignoreExisting": true,
+  "mapping": {
+    "fields": [
+      {
+        "extract": "id",
+        "generate": "ProductCode"
+      },
+      {
+        "extract": "title",
+        "generate": "Name"
+      },
+      {
+        "generate": "IsActive",
+        "hardCodedValue": "true"
+      }
+    ]
+  },
+  "salesforce": {
+    "operation": "insert",
+    "sObjectType": "Product2",
+    "api": "soap",
+    "idLookup": {
+      "whereClause": "(ProductCode = {{{string id}}})"
+    },
+    "removeNonSubmittableFields": false
+  },
+  "adaptorType": "SalesforceImport"
+}

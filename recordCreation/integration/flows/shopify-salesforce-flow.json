@@ -1,0 +1,18 @@
+{
+  "name": "shopify-salesforce flow",
+  "skipRetries": false,
+  "pageProcessors": [
+    {
+      "responseMapping": {
+        "fields": [],
+        "lists": []
+      },
+      "type": "import"
+    }
+  ],
+  "pageGenerators": [
+    {
+      
+    }
+  ]
+}

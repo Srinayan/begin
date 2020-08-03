@@ -1,0 +1,14 @@
+{
+    "export-shopify-customers.json": {
+        "hasDependencyOn": []
+    },
+    "import-salesforce-customers.json": {
+        "hasDependencyOn": []
+    },
+    "shopify-salesforce-flow.json": {
+        "hasDependencyOn": ["export-shopify-customers.json", "import-salesforce-customers.json","integration.json"]
+    },
+    "integration.json":{
+        "hasDependencyOn":[]
+    }
+}

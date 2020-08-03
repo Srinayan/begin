@@ -1,0 +1,52 @@
+{
+  "name": "Shopify Product Export",
+  "description": "Exporting Sneakers Product",
+  "_connectionId": "5f133d273dea9f68d8e28dd2",
+  "apiIdentifier": "eec0015c82",
+  "asynchronous": true,
+  "assistant": "shopify",
+  "assistantMetadata": {
+    "resource": "product",
+    "version": "v2",
+    "operation": "retrieves_alistofproducts"
+  },
+  "parsers": [],
+  "http": {
+    "relativeURI": "/products.json",
+    "method": "GET",
+    "headers": [
+      {
+        "name": "X-Shopify-Api-Features",
+        "value": "include-presentment-prices"
+      }
+    ],
+    "successMediaType": "json",
+    "errorMediaType": "json",
+    "paging": {
+      "method": "linkheader",
+      "lastPageStatusCode": 404,
+      "lastPageValues": [],
+      "linkHeaderRelation": "next"
+    },
+    "response": {
+      "resourcePath": "products",
+      "successValues": []
+    }
+  },
+  "rest": {
+    "relativeURI": "/products.json",
+    "method": "GET",
+    "headers": [
+      {
+        "name": "X-Shopify-Api-Features",
+        "value": "include-presentment-prices"
+      }
+    ],
+    "resourcePath": "products",
+    "pagingMethod": "linkheader",
+    "allowUndefinedResource": false,
+    "linkHeaderRelation": "next",
+    "successValues": []
+  },
+  "adaptorType": "RESTExport"
+}

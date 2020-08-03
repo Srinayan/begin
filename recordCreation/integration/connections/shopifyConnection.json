@@ -1,0 +1,36 @@
+{
+  "_id": "5f133d273dea9f68d8e28dd2",
+  "type": "rest",
+  "name": "Shopify Connection",
+  "assistant": "shopify",
+  "isHTTP": true,
+  "http": {
+    "mediaType": "json",
+    "baseURI": "https://samplestore-39.myshopify.com/admin/api/2020-04",
+    "ping": {
+      "relativeURI": "/orders.json",
+      "method": "GET"
+    },
+    "headers": [
+      {
+        "name": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "auth": {
+      "type": "basic"
+    }
+  },
+  "rest": {
+    "isHTTPProxy": false,
+    "mediaType": "json",
+    "authType": "basic",
+    "headers": [],
+    "encryptedFields": [],
+    "unencryptedFields": [],
+    "scope": [],
+    "pingRelativeURI": "/orders.json",
+    "pingMethod": "GET",
+    "refreshTokenHeaders": []
+  }
+}
