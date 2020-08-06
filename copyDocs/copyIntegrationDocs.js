@@ -21,7 +21,7 @@ class copyDocs{
                 json: json
             }, function (error, response, body) {
                 if (!error && response.statusCode == 201) {
-                    resolve(body._id);
+                    resolve(body);
                 }
                 else{
                     console.log(path+":"+response.statusCode);
@@ -30,11 +30,13 @@ class copyDocs{
             })
         });
     }
-    createIntegration(){
+    async createIntegration(cb){
         const integrationPath = "/integrations";
         const integrationJson = JSON.parse(fs.readFileSync(this.folderPath + "/integration.json"));
-        this.integrationId = this.postMethod(integrationPath, integrationJson);
-        return this.integrationId;
+        // var  integrationId = this.integrationId
+        var method = await this.postMethod(integrationPath, integrationJson);
+        this.integrationId = method._id;
+        cb(method);
     }
     createConnections(){
         const connectionPath = "/connections";
@@ -53,7 +55,7 @@ class copyDocs{
             })
         });
     }
-    createExports() {
+    createExports(cb) {
         const exportsPath = "/exports";
         var foldername = this.folderPath
         var dict  = this.mappingDictionary
@@ -68,13 +70,15 @@ class copyDocs{
                 const exportsJson = JSON.parse(fs.readFileSync(foldername+exportsPath+"/"+ file));
                 // exportsJson._connectionId = await dict.get(exportsJson._connectionId);
                 var id = exportsJson._id;
-                var exportId = postMethod(exportsPath, exportsJson);
+                var method = await postMethod(exportsPath, exportsJson);
+                var exportId = method._id;
                 dict.set(id, exportId);
-                exportIds.push(exportId);
+                // exportIds.push(exportId);
+                cb(method);
             })
         });
     }
-    createImports(){
+    createImports(cb){
         const importsPath = "/imports";
         var foldername = this.folderPath
         var dict = this.mappingDictionary
@@ -89,13 +93,15 @@ class copyDocs{
                 const importsJson = JSON.parse(fs.readFileSync(foldername+importsPath+"/"+file));
                 // importsJson._connectionId = await dict.get(importsJson._connectionId);
                 var id = importsJson._id;
-                var importID = postMethod(importsPath, importsJson)
+                var method = await postMethod(importsPath, importsJson);
+                var importID = method._id;
                 dict.set(id, importID);
-                importIds.push(importID);
+                // importIds.push(importID);
+                cb(method);
             })
         });
     }
-    createFlows(){
+    createFlows(cb){
         const flowsPath = "/flows";
         var foldername = this.folderPath;
         var dict = this.mappingDictionary;
@@ -112,8 +118,10 @@ class copyDocs{
                 flowsJson.pageProcessors[0]._importId = await dict.get(flowsJson.pageProcessors[0]._importId);
                 flowsJson.pageGenerators[0]._exportId = await dict.get(flowsJson.pageGenerators[0]._exportId);
                 flowsJson._integrationId = await integrationId;
-                var flow = postMethod(flowsPath, flowsJson);
-                flowsId.push(flow);
+                var method = await postMethod(flowsPath, flowsJson);
+                var flowId = method._id;
+                // flowsId.push(flowId);
+                cb(method);
             })
         });
     }

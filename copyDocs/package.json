@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "copyIntegrationDocs.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "nyc npm run test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.0.1"
+    "mocha": "^8.0.1",
+    "nock": "^13.0.3",
+    "nyc": "^15.1.0"
   },
   "directories": {
     "test": "test"
