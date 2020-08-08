@@ -1,0 +1,12 @@
+{
+    "type": "rest",
+    "name": "New Shopify Connection",
+    "rest": {
+        "mediaType": "json",
+        "authType": "basic",
+        "basicAuth": {
+            "username": "example@gmail.com",
+            "password": "rootPassword"
+        }
+    }
+}

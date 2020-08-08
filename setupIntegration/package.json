@@ -1,12 +1,12 @@
 {
-  "name": "copydocs",
+  "name": "setupintegration",
   "version": "1.0.0",
-  "main": "copyIntegrationDocs.js",
+  "description": "",
+  "main": "integration.js",
   "scripts": {
     "test": "mocha",
     "coverage": "nyc npm run test"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -14,9 +14,5 @@
     "mocha": "^8.0.1",
     "nock": "^13.0.3",
     "nyc": "^15.1.0"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "description": ""
+  }
 }

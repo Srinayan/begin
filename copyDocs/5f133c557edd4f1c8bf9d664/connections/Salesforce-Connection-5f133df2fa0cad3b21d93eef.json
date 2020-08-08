@@ -1,7 +1,7 @@
 {
   "_id": "5f133df2fa0cad3b21d93eef",
   "type": "salesforce",
-  "name": "Salesforce Connection",
+  "name": "N Salesforce Connection",
   "salesforce": {
     "sandbox": false,
     "scope": [],

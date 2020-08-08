@@ -1,9 +1,6 @@
 const { assert } = require('chai');
 var expect = require('chai').expect;
 var nock = require('nock');
-var fs = require('fs');
-const { doesNotMatch } = require('assert');
-const { runInNewContext } = require('vm');
 
 
 var copyDocs = require('/Users/Srinayan/Documents/Celigo/copyDocs/copyIntegrationDocs').copyDocs;
@@ -27,7 +24,7 @@ describe('Positive testing copyDocs Class',function(){
         integratorApi
             .post('/exports')
             .reply(201, {
-                body: result
+                body: "Export Id is returned"
             });
         integration.createExports(function (response) {
             assert.equal(response.body, result);

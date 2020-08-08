@@ -1,6 +1,6 @@
 {
-    "name": "Salesforce Import - Integration setup class",
-    "_connectionId": "importConnection.json",
+    "name": "Salesforce Node Import",
+    "_connectionId": "5f133df2fa0cad3b21d93eef",
     "ignoreExisting": true,
     "mapping": {
         "fields": [{

@@ -1,6 +1,7 @@
 {
-    "name": "Shopify Export - Integration setup class",
-    "_connectionId": "exportConnection.json",
+    "name": "Shopify Node Export",
+    "description": "Exporting Products from shopify",
+    "_connectionId": "5f133d273dea9f68d8e28dd2",
     "asynchronous": true,
     "assistant": "shopify",
     "http": {

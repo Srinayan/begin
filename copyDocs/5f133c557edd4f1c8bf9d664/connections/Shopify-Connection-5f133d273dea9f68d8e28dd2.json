@@ -1,7 +1,7 @@
 {
   "_id": "5f133d273dea9f68d8e28dd2",
   "type": "rest",
-  "name": "Shopify Connection",
+  "name": "N Shopify Connection",
   "assistant": "shopify",
   "isHTTP": true,
   "http": {
@@ -11,14 +11,16 @@
       "relativeURI": "/orders.json",
       "method": "GET"
     },
-    "headers": [
-      {
-        "name": "content-type",
-        "value": "application/json"
-      }
-    ],
+    "headers": [{
+      "name": "content-type",
+      "value": "application/json"
+    }],
     "auth": {
-      "type": "basic"
+      "type": "basic",
+      "basic": {
+        "username": "sri39.nayan@gmail.con",
+        "password": "Nayan@9900"
+      }
     }
   },
   "rest": {
@@ -31,6 +33,10 @@
     "scope": [],
     "pingRelativeURI": "/orders.json",
     "pingMethod": "GET",
-    "refreshTokenHeaders": []
+    "refreshTokenHeaders": [],
+    "basicAuth": {
+      "username": "sri39.nayan@gmail.con",
+      "password": "Nayan@9900"
+    }
   }
 }
